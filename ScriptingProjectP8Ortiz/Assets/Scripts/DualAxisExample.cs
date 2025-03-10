@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DualAxisExample : MonoBehaviour
 {
-    public Text horizontalValueDisplayText;
-    public Text verticalValueDisplayText;
     public float hRange;
     public float vRange;
 
@@ -17,8 +14,8 @@ public class DualAxisExample : MonoBehaviour
         float xPos = h * hRange;
         float yPos = v * vRange;
 
-        transform.position = new Vector3(xPos, 0, yPos);
-        horizontalValueDisplayText.text = h.ToString("F2");
-        verticalValueDisplayText.text = v.ToString("F2");
+        transform.position = new Vector3(xPos,yPos, 0);
+        Debug.Log(h.ToString("F2"));
+        Debug.Log(v.ToString("F2"));
     }
 }
